@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "894691463807",
+    "firebase_url": "https://iot-taruc.firebaseio.com",
+    "project_id": "iot-taruc",
+    "storage_bucket": "iot-taruc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894691463807:android:238d2cb5a220fce74ce54a",
+        "android_client_info": {
+          "package_name": "com.example.internetofthings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894691463807:android:a2e6d3aac27d5a9e4ce54a",
+        "android_client_info": {
+          "package_name": "com.example.iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894691463807:android:e09a3c8a6d7f21124ce54a",
+        "android_client_info": {
+          "package_name": "my.edu.tarc.iottaruc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894691463807:android:31a3b1cd1df6cd804ce54a",
+        "android_client_info": {
+          "package_name": "my.edu.tarc.smarthome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
