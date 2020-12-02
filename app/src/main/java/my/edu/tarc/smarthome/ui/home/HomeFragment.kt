@@ -33,35 +33,35 @@ class HomeFragment : Fragment() , View.OnClickListener{
         savedInstanceState: Bundle?
     ): View? {
 
-
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val textView: TextView = view.findViewById(R.id.text_home)
+        val btn_on: Button = view.findViewById(R.id.btn_on)
+        val btn_off: Button = view.findViewById(R.id.btn_off)
+        btn_on.setOnClickListener(this)
+        btn_off.setOnClickListener(this)
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
-        return root
+        return view
     }
 
     override fun onClick(view: View?) {
-        if (view != null) {
-            when (view.id) {
-
+            when (view?.id) {
                 R.id.btn_on -> {
                     //Setting Value
                     Log.i("Test: ","Hi")
                     myRef.setValue("1")
-
                 }
+
                 R.id.btn_off -> {
                     //Setting Value
                     myRef.setValue("0")
-
                 }
-
             }
-        }
+
     }
 
 }
+
