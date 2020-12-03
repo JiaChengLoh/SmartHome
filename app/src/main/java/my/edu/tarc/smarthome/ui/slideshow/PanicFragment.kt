@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.fragment_panic.*
 import my.edu.tarc.smarthome.R
 
 class PanicFragment : Fragment() , View.OnClickListener{
@@ -60,8 +61,7 @@ class PanicFragment : Fragment() , View.OnClickListener{
         val textViewPanic: TextView = view.findViewById(R.id.textViewPanic)
         val btn_on: Button = view.findViewById(R.id.btn_panic_on)
         val btn_off: Button = view.findViewById(R.id.btn_panic_off)
-        textViewPanic.setText("Panic Button")
-        textViewPanic.setOnClickListener(this)
+        textViewPanic.text = "Press On if emergency"
         btn_on.setOnClickListener(this)
         btn_off.setOnClickListener(this)
 
@@ -78,6 +78,7 @@ class PanicFragment : Fragment() , View.OnClickListener{
             R.id.btn_panic_on-> {
                 //Setting Value
                 panicOn()
+                textViewPanic.text = "Emergency!!!"
                 Toast.makeText(getActivity(),"Emergency!",Toast.LENGTH_SHORT).show();
 
             }
@@ -85,6 +86,7 @@ class PanicFragment : Fragment() , View.OnClickListener{
             R.id.btn_panic_off -> {
                 //Setting Value
                 panicOff()
+                textViewPanic.text = "Normal"
                 //R.id.textViewPanic.setText = "Bye"
                 Toast.makeText(getActivity(),"Normal~",Toast.LENGTH_SHORT).show();
             }
