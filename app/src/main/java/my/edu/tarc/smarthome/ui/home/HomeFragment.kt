@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.FirebaseDatabase
 import my.edu.tarc.smarthome.R
 
-
 class HomeFragment : Fragment() , View.OnClickListener{
 
     private lateinit var homeViewModel: HomeViewModel
@@ -60,7 +59,6 @@ class HomeFragment : Fragment() , View.OnClickListener{
             when (view?.id) {
                 R.id.btn_on -> {
                     //Setting Value
-                    Log.i("Test: ","Hi")
                     myRef.setValue("1")
                 }
 
@@ -69,8 +67,6 @@ class HomeFragment : Fragment() , View.OnClickListener{
                     myRef.setValue("0")
                 }
             }
-
     }
-
 }
 

@@ -23,6 +23,11 @@
         android:label="@string/menu_emergency"
         tools:layout="@layout/fragment_panic" />
     <fragment
+        android:id="@+id/nav_reminder"
+        android:name="my.edu.tarc.smarthome.ui.reminder.ReminderFragment"
+        android:label="reminder_fragment"
+        tools:layout="@layout/fragment_reminder" />
+    <fragment
         android:id="@+id/nav_bathroom"
         android:name="my.edu.tarc.smarthome.ui.bathroom.BathroomFragment"
         android:label="Bathroom"

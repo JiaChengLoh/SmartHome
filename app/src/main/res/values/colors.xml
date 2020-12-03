@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="red">#E71515</color>
 
 
     <color name="colorPrimary">#65c69d</color>
@@ -17,4 +17,16 @@
     <color name="c1">#65c69d</color>
     <color name="c2">#666f78</color>
     <color name="c3">#353e47</color>
+
+    <color name="colorDivider">#E6E6E6</color>
+
+    <!--    colors for white theme-->
+    <color name="background_color">#B8B5B5</color>
+    <color name="task_time_color">#000000</color>
+    <color name="colorItemDefaultBackground">#808080</color>
+    <color name="create_alarm_color1">#000000</color>
+    <color name="create_alarm_color">#000000</color>
+    <color name="colorBottomBarBackground1">#000000</color>
+    <color name="toast_text_color1">#FFFFFF</color>
+    <color name="chipColor">#673AB7</color>
 </resources>
