@@ -29,7 +29,7 @@ class BathroomFragment: Fragment() , View.OnClickListener{
 
     var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
     var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
-    var myRelay = database.getReference("PI_04_CONTROL/relay")
+    var myRelay = database.getReference("PI_04_CONTROL/relay1")
 
 
     override fun onCreateView(
@@ -74,10 +74,6 @@ class BathroomFragment: Fragment() , View.OnClickListener{
 
     }
 
-    private fun panicOff() {
-        //myLcd.setValue("=====NORMAL=====")
-       // myBuzzer.setValue("0")
-    }
 
 
     override fun onResume() {

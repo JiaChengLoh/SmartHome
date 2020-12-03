@@ -20,5 +20,9 @@
             android:id="@+id/nav_bathroom"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_bathroom" />
+        <item
+            android:id="@+id/nav_falldown"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_bathroom" />
     </group>
 </menu>

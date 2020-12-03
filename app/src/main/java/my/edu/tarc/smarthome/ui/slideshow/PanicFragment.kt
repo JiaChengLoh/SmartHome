@@ -42,7 +42,6 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
     //Getting Reference to Root Node
 
-    var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
     var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
     var myBuzzer = database.getReference("PI_04_CONTROL/buzzer")
 
@@ -64,7 +63,7 @@ class PanicFragment : Fragment() , View.OnClickListener{
         textViewPanic.text = "Press On if emergency"
         btn_on.setOnClickListener(this)
         btn_off.setOnClickListener(this)
-
+        textViewPanic.text = "Normal"
 
 
         slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -95,7 +94,6 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
 
     private fun panicOn() {
-        myLcdScr.setValue("1")
         myLcd.setValue("====EMERGENCY===")
         myBuzzer.setValue("1")
 

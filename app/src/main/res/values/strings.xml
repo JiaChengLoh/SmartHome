@@ -12,6 +12,7 @@
     <string name="menu_staircase">Staircase</string>
     <string name="menu_emergency">Emergency</string>
     <string name="menu_bathroom">Bathroom</string>
+    <string name="menu_falldown">Falldown</string>
 
     <string name="drawerOpen">drawerOpen</string>
     <string name="drawerClose">drawerClose</string>

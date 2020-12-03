@@ -24,6 +24,10 @@ class HomeFragment : Fragment() , View.OnClickListener{
     var databaseReference = database.reference
 
     //Getting Reference to Root Node
+    var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
+    var myLcdbkB = database.getReference("PI_04_CONTROL/lcdbkB")
+    var myLcdbkG = database.getReference("PI_04_CONTROL/lcdbkG")
+    var myLcdbkR = database.getReference("PI_04_CONTROL/lcdbkR")
     var myRef = database.getReference("PI_04_CONTROL/buzzer")
 
     override fun onCreateView(
@@ -43,6 +47,12 @@ class HomeFragment : Fragment() , View.OnClickListener{
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        myLcdScr.setValue("1")
+        myLcdbkB.setValue("5")
+        myLcdbkG.setValue("5")
+        myLcdbkR.setValue("5")
+
         return view
     }
 
