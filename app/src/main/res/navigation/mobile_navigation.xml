@@ -22,4 +22,9 @@
         android:name="my.edu.tarc.smarthome.ui.slideshow.PanicFragment"
         android:label="@string/menu_emergency"
         tools:layout="@layout/fragment_panic" />
+    <fragment
+        android:id="@+id/nav_bathroom"
+        android:name="my.edu.tarc.smarthome.ui.bathroom.BathroomFragment"
+        android:label="Bathroom"
+        tools:layout="@layout/fragment_bathroom" />
 </navigation>
