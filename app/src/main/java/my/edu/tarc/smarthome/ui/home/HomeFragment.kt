@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -38,7 +37,7 @@ class HomeFragment : Fragment() , View.OnClickListener{
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val textView: TextView = view.findViewById(R.id.text_home)
         val btn_on: Button = view.findViewById(R.id.btn_on)
-        val btn_off: Button = view.findViewById(R.id.btn_off)
+        val btn_off: Button = view.findViewById(R.id.btn_off_relay)
         btn_on.setOnClickListener(this)
         btn_off.setOnClickListener(this)
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -55,7 +54,7 @@ class HomeFragment : Fragment() , View.OnClickListener{
                     myRef.setValue("1")
                 }
 
-                R.id.btn_off -> {
+                R.id.btn_off_relay -> {
                     //Setting Value
                     myRef.setValue("0")
                 }

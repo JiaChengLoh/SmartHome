@@ -34,12 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:text="On"
-        app:layout_constraintBottom_toTopOf="@+id/btn_off"
+        app:layout_constraintBottom_toTopOf="@+id/btn_off_relay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_off"
+        android:id="@+id/btn_off_relay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="170dp"
