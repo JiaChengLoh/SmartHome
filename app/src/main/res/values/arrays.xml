@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--These two arrays list cooking time intervals in minutes and the text representing
+	that interval. They need to be in sync when anything added, removed or modified   -->
+
+
+    <string-array name="medicine_array">
+        <item>Pill A</item>
+        <item>Pill B</item>
+        <item>Pill C</item>
+        <item>Pill D</item>
+        <item>Pill E</item>
+    </string-array>
+
+    <integer-array name="minutes_array">
+        <item>0</item>
+        <item>4</item>
+        <item>6</item>
+        <item>10</item>
+        <item>12</item>
+    </integer-array>
+</resources>

@@ -46,4 +46,24 @@
     <string name="about_timely">About Timely</string>
     <string name="about_timely_app">Timely is an alarm app created for scheduling multiple alarms at a time\n\nAvailable Features:\n-Create/Schedule multiple or single alarms.\n-Turn on or Turn off specific alarm.\n -Swipe delete alarm.\n-Stop or Snooze alarm sound.\nand lots more..</string>
     <string name="close">Close</string>
+
+    <string name="fcm_message">FCM Message</string>
+    <string name="message_subscribe_failed">Failed to subscribe to topic</string>
+    <string name="message_subscribed">Subscribed to topic</string>
+    <string name="medicine_notification_channel_id" translatable="false">medicine_channel</string>
+    <string name="medicine_notification_channel_name" translatable="true">Medicine</string>
+    <string name="breakfast_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="breakfast_notification_channel_name" translatable="true">Breakfast</string>
+
+
+    <string name="medicine_ready">It is time! To take medicine!</string>
+    <string name="snooze">Snooze</string>
+    <string name="notification_title">Medicine Timer</string>
+    <string name="notification_text">Your medicine is ready!!</string>
+    <string name="medicine_prompt">How do you like your medicine?</string>
+    <string name="timer_running">Medicine timer is running...</string>
+    <string name="breakfast_notification_channel_description">Breakfast reminder</string>
+    <string name="timer_on">Start</string>
+    <string name="timer_off">Stop</string>
+
 </resources>
