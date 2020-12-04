@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.reminder.ReminderFragment">
+    tools:context=".ui.medicine.MedicineFragment">
 
     <TextView
-        android:id="@+id/text_reminder"
+        android:id="@+id/text_medicine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,14 +23,13 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <Button
-        android:id="@+id/btn_reminder_on"
+        android:id="@+id/btn_medicine_on"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="284dp"
         android:text="@string/on"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_reminder" />
+        app:layout_constraintTop_toBottomOf="@+id/text_medicine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

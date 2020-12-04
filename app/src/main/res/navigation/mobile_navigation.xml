@@ -36,4 +36,9 @@
         android:id="@+id/nav_falldown"
         android:name="my.edu.tarc.smarthome.ui.falldown.FalldownFragment"
         android:label="FalldownFragment" />
+    <fragment
+        android:id="@+id/nav_medicine"
+        android:name="my.edu.tarc.smarthome.ui.medicine.MedicineFragment"
+        android:label="fragment_medicine"
+        tools:layout="@layout/fragment_medicine" />
 </navigation>

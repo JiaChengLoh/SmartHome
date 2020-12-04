@@ -17,9 +17,9 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_emergency" />
         <item
-            android:id="@+id/nav_reminder"
+            android:id="@+id/nav_medicine"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_reminder" />
+            android:title="@string/menu_medicine" />
         <item
             android:id="@+id/nav_bathroom"
             android:icon="@drawable/ic_menu_slideshow"

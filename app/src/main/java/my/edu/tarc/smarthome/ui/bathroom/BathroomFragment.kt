@@ -12,7 +12,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.FirebaseDatabase
 import my.edu.tarc.smarthome.R
-import my.edu.tarc.smarthome.ui.slideshow.PanicViewModel
 
 class BathroomFragment: Fragment() , View.OnClickListener{
     private lateinit var bathroomViewModel: BathroomViewModal
@@ -41,7 +40,7 @@ class BathroomFragment: Fragment() , View.OnClickListener{
         val view = inflater.inflate(R.layout.fragment_bathroom, container, false)
         bathroomViewModel = ViewModelProvider(this).get(BathroomViewModal::class.java)
         val textView: TextView = view.findViewById(R.id.text_bathroom)
-        val btn_on: Button = view.findViewById(R.id.btn_bathroom_on)
+        val btn_on: Button = view.findViewById(R.id.btn_reminder_on)
         //val btn_off: Button = view.findViewById(R.id.btn_panic_off)
         //textViewPanic.setText("Panic Button")
         //textViewPanic.setOnClickListener(this)
@@ -57,7 +56,7 @@ class BathroomFragment: Fragment() , View.OnClickListener{
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.btn_bathroom_on-> {
+            R.id.btn_reminder_on-> {
                 //Setting Value
                 bathroomOn()
                 Toast.makeText(getActivity(),"Light ON", Toast.LENGTH_SHORT).show();
