@@ -10,8 +10,18 @@ import android.os.SystemClock
 import android.text.format.DateUtils
 import androidx.core.app.AlarmManagerCompat
 import androidx.core.content.ContextCompat
+import com.google.firebase.database.FirebaseDatabase
 
 class SnoozeReceiver: BroadcastReceiver() {
+    var database = FirebaseDatabase.getInstance()
+    //Getting Database Reference
+    var databaseReference = database.reference
+
+    //Getting Reference to Root Node
+
+    var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
+    var myBuzzer = database.getReference("PI_04_CONTROL/buzzer")
+
     private val REQUEST_CODE = 0
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -37,6 +47,10 @@ class SnoozeReceiver: BroadcastReceiver() {
                 NotificationManager::class.java
         ) as NotificationManager
         notificationManager.cancelAll()
+
+
+        myLcd.setValue("=====SNOOZE=====")
+        myBuzzer.setValue("0")
     }
 
 }

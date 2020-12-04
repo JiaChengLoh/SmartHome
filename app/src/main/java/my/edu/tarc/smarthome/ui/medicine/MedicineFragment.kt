@@ -22,6 +22,13 @@ import my.edu.tarc.smarthome.databinding.FragmentMedicineBinding
 import my.edu.tarc.smarthome.ui.bathroom.BathroomViewModal
 
 class MedicineFragment: Fragment() {
+    var database = FirebaseDatabase.getInstance()
+    //Getting Database Reference
+    var databaseReference = database.reference
+
+    //Getting Reference to Root Node
+    var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
+
     //private lateinit var medicineViewModel: MedicineViewModel
     private val TOPIC = "breakfast"
 
@@ -35,7 +42,7 @@ class MedicineFragment: Fragment() {
                 inflater, R.layout.fragment_medicine, container, false
         )
         val viewModel = ViewModelProvider(this).get(MedicineViewModel::class.java)
-
+        myLcd.setValue("====MEDICINE====")
         binding.medicineViewModel = viewModel
         binding.lifecycleOwner = this.viewLifecycleOwner
 

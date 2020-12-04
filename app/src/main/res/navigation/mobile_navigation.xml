@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_staircase"
-        android:name="my.edu.tarc.smarthome.ui.gallery.StaircaseFragment"
-        android:label="@string/menu_staircase"
-        tools:layout="@layout/fragment_staircase" />
-
-    <fragment
         android:id="@+id/nav_emergency"
         android:name="my.edu.tarc.smarthome.ui.slideshow.PanicFragment"
         android:label="@string/menu_emergency"

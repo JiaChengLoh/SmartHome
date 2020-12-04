@@ -9,12 +9,14 @@ import android.os.SystemClock
 import androidx.core.app.AlarmManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.*
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.*
 import my.edu.tarc.smarthome.receiver.AlarmReceiver
 import my.edu.tarc.smarthome.util.cancelNotifications
 import my.edu.tarc.smarthome.R
 
 class MedicineViewModel (private val app: Application) : AndroidViewModel(app) {
+
 
     private val REQUEST_CODE = 0
     private val TRIGGER_TIME = "TRIGGER_AT"
@@ -164,6 +166,7 @@ class MedicineViewModel (private val app: Application) : AndroidViewModel(app) {
         timer.cancel()
         _elapsedTime.value = 0
         _alarmOn.value = false
+
     }
 
     private suspend fun saveTime(triggerTime: Long) =
