@@ -54,9 +54,6 @@ class BathroomFragment: Fragment() , SensorEventListener {
 //        Define the sensor
         mSensors = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
 
-        bathroomViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return view
     }
 
@@ -70,8 +67,9 @@ class BathroomFragment: Fragment() , SensorEventListener {
 //        Sensor change value
         val millibarsOfPressure = p0!!.values[0]
         if (p0.sensor.type == Sensor.TYPE_LIGHT)
-            Toast.makeText(this.activity, "" + millibarsOfPressure + " lx", Toast.LENGTH_SHORT).show()
-                if (millibarsOfPressure <= 10) {
+            bathroom_light.text = "" + millibarsOfPressure + " lx"
+            //Toast.makeText(this.activity, "" + millibarsOfPressure + " lx", Toast.LENGTH_SHORT).show()
+                if (millibarsOfPressure <= 30) {
                     myLed.setValue("1")
                     bathroom_image.setImageResource(R.drawable.open_turned_on_light)
                     bathroom_text.text = "LED Light ON"

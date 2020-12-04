@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import kotlinx.android.synthetic.main.fragment_falldown.*
 import my.edu.tarc.smarthome.R
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
@@ -40,7 +41,6 @@ class FalldownFragment: Fragment() , SensorEventListener {
         super.onCreate(savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_falldown, container, false)
         falldownViewModel = ViewModelProvider(this).get(FalldownViewModal::class.java)
-        val textView: TextView = view.findViewById(R.id.text_fallDown)
         //val btn_on: Button = view.findViewById(R.id.btn_bathroom_on)
         //val btn_off: Button = view.findViewById(R.id.btn_panic_off)
         //textViewPanic.setText("Panic Button")
@@ -62,10 +62,6 @@ class FalldownFragment: Fragment() , SensorEventListener {
             mSensorManager.registerListener(this, light, SensorManager.SENSOR_DELAY_NORMAL)
         }
 
-
-        falldownViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return view
     }
 
@@ -99,9 +95,10 @@ class FalldownFragment: Fragment() , SensorEventListener {
                 val duration = (System.currentTimeMillis() - movementStart).toString()
 
                 lastMovementFall = System.currentTimeMillis()
-                Toast.makeText(getActivity(),"Fall down", Toast.LENGTH_SHORT).show();
+                falldown_image.setImageResource(R.drawable.falldown)
+                falldown_text.text = "Fall down"
 
-
+                //Toast.makeText(getActivity(),"Fall down", Toast.LENGTH_SHORT).show();
             }
         }
     }

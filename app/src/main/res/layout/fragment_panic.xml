@@ -20,7 +20,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.011"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/btn_panic_on"
@@ -48,9 +49,8 @@
         android:id="@+id/textViewPanic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Emergency"
+        android:text="Normal"
         android:textSize="50sp"
-        android:textColor="@color/red"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_panic_on"
         app:layout_constraintEnd_toEndOf="parent"
