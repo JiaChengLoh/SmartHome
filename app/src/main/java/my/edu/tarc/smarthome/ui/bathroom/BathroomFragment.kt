@@ -33,6 +33,9 @@ class BathroomFragment: Fragment() , SensorEventListener {
 
     var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
     var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
+    var myLcdbkB = database.getReference("PI_04_CONTROL/lcdbkB")
+    var myLcdbkG = database.getReference("PI_04_CONTROL/lcdbkG")
+    var myLcdbkR = database.getReference("PI_04_CONTROL/lcdbkR")
     var myRelay = database.getReference("PI_04_CONTROL/relay1")
     var myLed = database.getReference("PI_04_CONTROL/ledlgt")
     var myBzr = database.getReference("PI_04_CONTROL/buzzer")
@@ -57,13 +60,15 @@ class BathroomFragment: Fragment() , SensorEventListener {
 //        Define the sensor
         mSensors = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
 
-        return view
-    }
-
-    private fun bathroomOff() {
+        myLcd.setValue("====BATHROOM====")
         myLcdScr.setValue("1")
-        myLcd.setValue("===BUZZER==OFF===")
+        myLcdbkB.setValue("5")
+        myLcdbkG.setValue("5")
+        myLcdbkR.setValue("5")
+        myRelay.setValue("0")
         myBzr.setValue("0")
+
+        return view
     }
 
     override fun onSensorChanged(p0: SensorEvent?) {
@@ -71,17 +76,19 @@ class BathroomFragment: Fragment() , SensorEventListener {
         val millibarsOfPressure = p0!!.values[0]
         if (p0.sensor.type == Sensor.TYPE_LIGHT)
             bathroom_light.text = "" + millibarsOfPressure + " lx"
-            //Toast.makeText(this.activity, "" + millibarsOfPressure + " lx", Toast.LENGTH_SHORT).show()
-                if (millibarsOfPressure <= 30) {
-                    myLed.setValue("1")
-                    bathroom_image.setImageResource(R.drawable.open_turned_on_light)
-                    bathroom_text.text = "LED Light ON"
-                }
-                else {
-                    myLed.setValue("0")
-                    bathroom_image.setImageResource(R.drawable.open_turned_off_light)
-                    bathroom_text.text = "LED Light OFF"
-                }
+        //Toast.makeText(this.activity, "" + millibarsOfPressure + " lx", Toast.LENGTH_SHORT).show()
+        if (millibarsOfPressure <= 30) {
+            myLed.setValue("1")
+            myRelay.setValue("1")
+            bathroom_image.setImageResource(R.drawable.open_turned_on_light)
+            bathroom_text.text = "LED Light ON"
+        }
+        else {
+            myLed.setValue("0")
+            myRelay.setValue("0")
+            bathroom_image.setImageResource(R.drawable.open_turned_off_light)
+            bathroom_text.text = "LED Light OFF"
+        }
     }
 
     override fun onResume() {

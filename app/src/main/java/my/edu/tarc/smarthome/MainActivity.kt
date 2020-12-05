@@ -13,7 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import my.edu.tarc.smarthome.ui.medicine.MedicineFragment
+import com.google.firebase.FirebaseOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_emergency, R.id.nav_medicine, R.id.nav_bathroom, R.id.nav_falldown, R.id.nav_door), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val options = FirebaseOptions.Builder()
+            .setProjectId("bait2123-202010-04")
+            .setApplicationId("1:441104878168:android:fd9d57d050895e488c982d")
+            .setApiKey("AIzaSyDqVTZhCodlKPrB7Y2QcSvBhXpMv1H-WCQ")
+            .build()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

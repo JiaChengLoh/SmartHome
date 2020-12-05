@@ -28,18 +28,23 @@ class MedicineFragment: Fragment() {
 
     //Getting Reference to Root Node
     var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
+    var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
+    var myLcdbkB = database.getReference("PI_04_CONTROL/lcdbkB")
+    var myLcdbkG = database.getReference("PI_04_CONTROL/lcdbkG")
+    var myLcdbkR = database.getReference("PI_04_CONTROL/lcdbkR")
+    var myRelay = database.getReference("PI_04_CONTROL/relay1")
+    var myBzr = database.getReference("PI_04_CONTROL/buzzer")
 
     //private lateinit var medicineViewModel: MedicineViewModel
-    private val TOPIC = "breakfast"
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         super.onCreate(savedInstanceState)
         val binding: FragmentMedicineBinding = DataBindingUtil.inflate(
-                inflater, R.layout.fragment_medicine, container, false
+            inflater, R.layout.fragment_medicine, container, false
         )
         val viewModel = ViewModelProvider(this).get(MedicineViewModel::class.java)
         myLcd.setValue("====MEDICINE====")
@@ -58,26 +63,32 @@ class MedicineFragment: Fragment() {
 
 
         createChannel(
-                getString(R.string.medicine_notification_channel_id),
-                getString(R.string.medicine_notification_channel_name)
+            getString(R.string.medicine_notification_channel_id),
+            getString(R.string.medicine_notification_channel_name)
         )
 
+        myLcdScr.setValue("1")
+        myLcdbkB.setValue("5")
+        myLcdbkG.setValue("5")
+        myLcdbkR.setValue("5")
+        myRelay.setValue("0")
+        myBzr.setValue("0")
 
         return binding.root
     }
 
     private fun createChannel(channelId: String, channelName: String) {
-        // TODO: Step 1.6 START create a channel
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val notificationChannel = NotificationChannel(
-                    channelId,
-                    channelName,
-                    // TODO: Step 2.4 change importance
-                    NotificationManager.IMPORTANCE_HIGH
-            )// TODO: Step 2.6 disable badges for this channel
-                    .apply {
-                        setShowBadge(false)
-                    }
+                channelId,
+                channelName,
+
+                NotificationManager.IMPORTANCE_HIGH
+            )
+                .apply {
+                    setShowBadge(false)
+                }
 
             notificationChannel.enableLights(true)
             notificationChannel.lightColor = Color.RED
@@ -85,15 +96,11 @@ class MedicineFragment: Fragment() {
             notificationChannel.description = getString(R.string.breakfast_notification_channel_description)
 
             val notificationManager = requireActivity().getSystemService(
-                    NotificationManager::class.java
+                NotificationManager::class.java
             )
             notificationManager.createNotificationChannel(notificationChannel)
-
         }
-        // TODO: Step 1.6 END create a channel
     }
-
-
 
     companion object {
         fun newInstance() = MedicineFragment()

@@ -14,9 +14,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.constraintlayout.motion.widget.Debug.getLocation
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -42,12 +40,17 @@ class PanicFragment : Fragment() , View.OnClickListener{
     //Getting Reference to Root Node
 
     var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
-    var myBuzzer = database.getReference("PI_04_CONTROL/buzzer")
+    var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
+    var myLcdbkB = database.getReference("PI_04_CONTROL/lcdbkB")
+    var myLcdbkG = database.getReference("PI_04_CONTROL/lcdbkG")
+    var myLcdbkR = database.getReference("PI_04_CONTROL/lcdbkR")
+    var myRelay = database.getReference("PI_04_CONTROL/relay1")
+    var myBzr = database.getReference("PI_04_CONTROL/buzzer")
+
 
     companion object {
         private const val REQUEST_PERMISSIONS_REQUEST_CODE = 1
     }
-
 
     private lateinit var txtView: TextView
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -58,9 +61,9 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         super.onCreate(savedInstanceState)
         slideshowViewModel = ViewModelProvider(this).get(PanicViewModel::class.java)
@@ -74,28 +77,14 @@ class PanicFragment : Fragment() , View.OnClickListener{
         btn_off.setOnClickListener(this)
         textViewPanic.text = "Normal"
 
+        myLcd.setValue("=====NORMAL=====")
+        myLcdScr.setValue("1")
+        myLcdbkB.setValue("5")
+        myLcdbkG.setValue("5")
+        myLcdbkR.setValue("5")
+        myRelay.setValue("0")
+        myBzr.setValue("0")
 
-
-
-
-/*
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
-
-        val permissionState = ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION)
-
-        //val permissionState = ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION)
-        if (permissionState != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), REQUEST_PERMISSIONS_REQUEST_CODE)
-            //ActivityCompat.requestPermissions(getActivity(), arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), REQUEST_PERMISSIONS_REQUEST_CODE)
-        }
-        if (myLatitude == null || myLatitude == null)
-            getLocation()
-
- */
-
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return view
     }
 
@@ -129,13 +118,13 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
     private fun panicOn() {
         myLcd.setValue("====EMERGENCY===")
-        myBuzzer.setValue("1")
+        myBzr.setValue("1")
 
     }
 
     private fun panicOff() {
         myLcd.setValue("=====NORMAL=====")
-        myBuzzer.setValue("0")
+        myBzr.setValue("0")
     }
 
 
@@ -147,6 +136,8 @@ class PanicFragment : Fragment() , View.OnClickListener{
     override fun onPause() {
         super.onPause()
     }
+
+
 
 
 
@@ -185,5 +176,6 @@ class PanicFragment : Fragment() , View.OnClickListener{
             }
         }
     }
+
 
 }

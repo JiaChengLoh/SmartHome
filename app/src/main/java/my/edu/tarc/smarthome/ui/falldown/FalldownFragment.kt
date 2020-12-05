@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_falldown.*
 import my.edu.tarc.smarthome.R
 import java.text.DecimalFormat
@@ -30,6 +31,16 @@ class FalldownFragment: Fragment() , SensorEventListener {
     private var lastMovementFall: Long = 0
     private var movementStart: Long = 0
     private var ct = 2
+
+    var database = FirebaseDatabase.getInstance()
+
+    var myBzr = database.getReference("PI_04_CONTROL/buzzer")
+    var myLcdbkB = database.getReference("PI_04_CONTROL/lcdbkB")
+    var myLcdbkG = database.getReference("PI_04_CONTROL/lcdbkG")
+    var myLcdbkR = database.getReference("PI_04_CONTROL/lcdbkR")
+    var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
+    var myRelay = database.getReference("PI_04_CONTROL/relay1")
+    var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
 
     private lateinit var falldownViewModel: FalldownViewModal
 
@@ -61,6 +72,14 @@ class FalldownFragment: Fragment() , SensorEventListener {
         mSensors?.also { light ->
             mSensorManager.registerListener(this, light, SensorManager.SENSOR_DELAY_NORMAL)
         }
+
+        myLcd.setValue("=====NORMAL=====")
+        myLcdScr.setValue("1")
+        myLcdbkB.setValue("5")
+        myLcdbkG.setValue("5")
+        myLcdbkR.setValue("5")
+        myRelay.setValue("0")
+        myBzr.setValue("0")
 
         return view
     }
@@ -97,6 +116,8 @@ class FalldownFragment: Fragment() , SensorEventListener {
                 lastMovementFall = System.currentTimeMillis()
                 falldown_image.setImageResource(R.drawable.falldown)
                 falldown_text.text = "Fall down"
+                myBzr.setValue("1")
+                myLcd.setValue("===FALL==DOWN===")
 
                 //Toast.makeText(getActivity(),"Fall down", Toast.LENGTH_SHORT).show();
             }

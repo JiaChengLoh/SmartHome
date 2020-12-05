@@ -21,11 +21,13 @@ class HomeFragment : Fragment(){
     var databaseReference = database.reference
 
     //Getting Reference to Root Node
+    var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
     var myLcdScr = database.getReference("PI_04_CONTROL/lcdscr")
     var myLcdbkB = database.getReference("PI_04_CONTROL/lcdbkB")
     var myLcdbkG = database.getReference("PI_04_CONTROL/lcdbkG")
     var myLcdbkR = database.getReference("PI_04_CONTROL/lcdbkR")
-    var myRef = database.getReference("PI_04_CONTROL/buzzer")
+    var myRelay = database.getReference("PI_04_CONTROL/relay1")
+    var myBzr = database.getReference("PI_04_CONTROL/buzzer")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,15 +36,17 @@ class HomeFragment : Fragment(){
     ): View? {
 
         homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(this).get(HomeViewModel::class.java)
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         //val textView: TextView = view.findViewById(R.id.text_home)
 
-
+        myLcd.setValue("======Home======")
         myLcdScr.setValue("1")
         myLcdbkB.setValue("5")
         myLcdbkG.setValue("5")
         myLcdbkR.setValue("5")
+        myRelay.setValue("0")
+        myBzr.setValue("0")
 
         return view
     }
