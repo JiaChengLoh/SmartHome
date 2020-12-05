@@ -44,10 +44,10 @@ class PanicFragment : Fragment() , View.OnClickListener{
     var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
     var myBuzzer = database.getReference("PI_04_CONTROL/buzzer")
 
-
     companion object {
         private const val REQUEST_PERMISSIONS_REQUEST_CODE = 1
     }
+
 
     private lateinit var txtView: TextView
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -76,15 +76,6 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
 
 
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
-        val permissionState = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-        if (permissionState != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), REQUEST_PERMISSIONS_REQUEST_CODE)
-        }
-        if (myLatitude == null || myLatitude == null)
-            getLocation()
-
 
 
 /*
@@ -101,10 +92,6 @@ class PanicFragment : Fragment() , View.OnClickListener{
             getLocation()
 
  */
-
-
-
-
 
         slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
@@ -163,8 +150,6 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
 
 
-
-
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
             REQUEST_PERMISSIONS_REQUEST_CODE -> {
@@ -179,11 +164,11 @@ class PanicFragment : Fragment() , View.OnClickListener{
 
         val smsBody = StringBuffer()
         smsBody.append("http://maps.google.com?q=")
-        smsBody.append(myLatitude)
+        smsBody.append(4.468468468468468)
         smsBody.append(",")
-        smsBody.append(myLongitude)
+        smsBody.append(101.17239240586088)
         try {
-            val mobile = "60146265349"
+            val mobile = "60175998355"
             val msg = smsBody.toString()
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=$mobile&text=$msg")))
         } catch (e: java.lang.Exception) {
@@ -200,6 +185,5 @@ class PanicFragment : Fragment() , View.OnClickListener{
             }
         }
     }
-
 
 }

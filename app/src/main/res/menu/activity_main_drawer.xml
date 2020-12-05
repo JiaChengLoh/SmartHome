@@ -25,5 +25,9 @@
             android:id="@+id/nav_falldown"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_falldown" />
+        <item
+            android:id="@+id/nav_door"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_door" />
     </group>
 </menu>

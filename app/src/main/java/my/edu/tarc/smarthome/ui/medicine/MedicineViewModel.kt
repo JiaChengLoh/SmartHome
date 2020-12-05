@@ -17,6 +17,14 @@ import my.edu.tarc.smarthome.R
 
 class MedicineViewModel (private val app: Application) : AndroidViewModel(app) {
 
+    var database = FirebaseDatabase.getInstance()
+    //Getting Database Reference
+    var databaseReference = database.reference
+
+    var myBuzzer = database.getReference("PI_04_CONTROL/buzzer")
+    var myLcd = database.getReference("PI_04_CONTROL/lcdtxt")
+
+
 
     private val REQUEST_CODE = 0
     private val TRIGGER_TIME = "TRIGGER_AT"
@@ -156,6 +164,8 @@ class MedicineViewModel (private val app: Application) : AndroidViewModel(app) {
     private fun cancelNotification() {
         resetTimer()
         alarmManager.cancel(notifyPendingIntent)
+        //myBuzzer.setValue("0")
+        //myLcd.setValue("======STOP======")
     }
 
 
@@ -172,7 +182,9 @@ class MedicineViewModel (private val app: Application) : AndroidViewModel(app) {
     private suspend fun saveTime(triggerTime: Long) =
             withContext(Dispatchers.IO) {
                 prefs.edit().putLong(TRIGGER_TIME, triggerTime).apply()
+
             }
+
 
     private suspend fun loadTime(): Long =
             withContext(Dispatchers.IO) {
