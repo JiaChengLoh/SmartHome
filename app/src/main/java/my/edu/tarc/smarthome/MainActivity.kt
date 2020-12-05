@@ -46,6 +46,16 @@ class MainActivity : AppCompatActivity() {
             .setApplicationId("1:441104878168:android:fd9d57d050895e488c982d")
             .setApiKey("AIzaSyDqVTZhCodlKPrB7Y2QcSvBhXpMv1H-WCQ")
             .build()
+
+        /*
+        // Initialize secondary FirebaseApp.
+        Firebase.initialize(this /* Context */, options, "secondary")
+
+        // Retrieve secondary FirebaseApp.
+        val secondary = Firebase.app("secondary")
+        // Get the database for the other app.
+        val secondaryDatabase = Firebase.database(secondary)
+         */
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
