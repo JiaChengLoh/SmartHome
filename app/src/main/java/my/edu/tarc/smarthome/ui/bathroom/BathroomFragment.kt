@@ -1,5 +1,6 @@
 package my.edu.tarc.smarthome.ui.bathroom
 
+import android.Manifest
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -10,6 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.checkSelfPermission
+import androidx.core.content.PermissionChecker.checkSelfPermission
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
