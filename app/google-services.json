@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "894691463807",
-    "firebase_url": "https://iot-taruc.firebaseio.com",
-    "project_id": "iot-taruc",
-    "storage_bucket": "iot-taruc.appspot.com"
+    "project_number": "441104878168",
+    "firebase_url": "https://bait2123-202010-04.firebaseio.com",
+    "project_id": "bait2123-202010-04",
+    "storage_bucket": "bait2123-202010-04.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:894691463807:android:238d2cb5a220fce74ce54a",
+        "mobilesdk_app_id": "1:441104878168:android:fd9d57d050895e488c982d",
         "android_client_info": {
-          "package_name": "com.example.internetofthings"
+          "package_name": "com.android.example.iottest"
         }
       },
       "oauth_client": [
         {
-          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -37,27 +37,85 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:894691463807:android:a2e6d3aac27d5a9e4ce54a",
+        "mobilesdk_app_id": "1:441104878168:android:cca762c8880170a98c982d",
+        "android_client_info": {
+          "package_name": "com.android.example.smartenvironmentalgreenhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:abaef12a330a0e878c982d",
+        "android_client_info": {
+          "package_name": "com.example.greenhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:bd67c929789e0e108c982d",
         "android_client_info": {
           "package_name": "com.example.iot"
         }
       },
       "oauth_client": [
         {
-          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -66,27 +124,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:894691463807:android:e09a3c8a6d7f21124ce54a",
+        "mobilesdk_app_id": "1:441104878168:android:e9b2b52ad0d24b8b8c982d",
         "android_client_info": {
-          "package_name": "my.edu.tarc.iottaruc"
+          "package_name": "com.example.iotapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -95,27 +153,230 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:894691463807:android:31a3b1cd1df6cd804ce54a",
+        "mobilesdk_app_id": "1:441104878168:android:3c2a22ae69ad782b8c982d",
+        "android_client_info": {
+          "package_name": "com.example.iotcommonresources"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:5bd0f457fd3555da8c982d",
+        "android_client_info": {
+          "package_name": "com.example.smartanti_theftsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:2bdfcc093970ebd28c982d",
+        "android_client_info": {
+          "package_name": "com.example.smartantitheftsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:05eda0d98cea050e8c982d",
+        "android_client_info": {
+          "package_name": "com.example.smartgreenhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:bcdf1659e975e00e8c982d",
+        "android_client_info": {
+          "package_name": "com.example.tryingfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:c5fe762b5095a30e8c982d",
         "android_client_info": {
           "package_name": "my.edu.tarc.smarthome"
         }
       },
       "oauth_client": [
         {
-          "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDysHiFMWG_CZJlTqJi-0NXk0jk9eVBD4c"
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "894691463807-a0fraho3ln38l94si94sbtv14ajffuss.apps.googleusercontent.com",
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:b12baea8799687358c982d",
+        "android_client_info": {
+          "package_name": "my.edu.tarc.smarthometaruc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441104878168:android:105abb89e7c8d59e8c982d",
+        "android_client_info": {
+          "package_name": "test.test.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnSAj2D-1SWC7rEOSXrFljL4dGvoHl_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441104878168-9cce27tqdvsoku4fhrp31rabqeplahun.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

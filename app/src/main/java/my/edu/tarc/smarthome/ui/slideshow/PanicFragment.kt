@@ -77,7 +77,7 @@ class PanicFragment : Fragment() , View.OnClickListener{
         btn_off.setOnClickListener(this)
         textViewPanic.text = "Normal"
 
-        myLcd.setValue("=====NORMAL=====")
+        myLcd.setValue("=====PANIC======")
         myLcdScr.setValue("1")
         myLcdbkB.setValue("5")
         myLcdbkG.setValue("5")

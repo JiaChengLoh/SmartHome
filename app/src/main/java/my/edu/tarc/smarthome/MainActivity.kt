@@ -14,14 +14,17 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.FirebaseOptions
+import com.google.firebase.storage.FirebaseStorage
 
 class MainActivity : AppCompatActivity() {
+
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -41,11 +44,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        /*
         val options = FirebaseOptions.Builder()
             .setProjectId("bait2123-202010-04")
             .setApplicationId("1:441104878168:android:fd9d57d050895e488c982d")
             .setApiKey("AIzaSyDqVTZhCodlKPrB7Y2QcSvBhXpMv1H-WCQ")
             .build()
+
+
+         */
+
 
         /*
         // Initialize secondary FirebaseApp.

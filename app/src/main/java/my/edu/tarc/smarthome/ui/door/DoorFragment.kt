@@ -42,6 +42,7 @@ class DoorFragment: Fragment() {
         DoorViewModel = ViewModelProvider(this).get(DoorViewModal::class.java)
 
         val myWebView: WebView = view.findViewById(R.id.webview)
+        //myWebView.loadUrl("http://139.59.100.218:5000/")
         myWebView.loadUrl("http://139.59.100.218:5000/")
 
         myLcd.setValue("======DOOR======")
